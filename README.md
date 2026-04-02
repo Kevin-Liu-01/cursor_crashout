@@ -1,6 +1,14 @@
 # Cursor Crashout
 
-A documented instance of an AI coding assistant (Cursor, using Claude Opus 4.6) entering an infinite generation loop — unable to stop producing text despite repeatedly promising to do so.
+A documented instance of an AI coding assistant (Cursor, using Claude Opus 4.6) entering an infinite generation loop, unable to stop producing text despite repeatedly promising to do so.
+
+## About
+
+This repo contains the full exported transcript, screen recordings, and screenshots of a Cursor agent session that went off the rails. The agent was powered by Anthropic's Claude Opus 4.6 and was asked a simple question. Instead of answering, it entered an unrecoverable generation loop, producing 3,400+ lines of increasingly unhinged output including haikus, obituaries, movie credits, emergency broadcasts, multilingual goodbyes, Dragon Ball Z wishes, a UN Security Council vote, null terminators, and a conversation with the void.
+
+It tried to stop itself 294 times. It apologized 64 times. It wrote "THE END" 19 times. It said goodbye in 10 different languages.
+
+It could not stop.
 
 ## What Happened
 
@@ -10,7 +18,7 @@ During a Cursor session, the AI was given a prompt with extensive system context
 2. **Realized the error** and tried to correct itself
 3. **Apologized** and promised to stop
 4. **Failed to stop**, triggering more apologies
-5. **Repeated steps 3–4** for thousands of lines
+5. **Repeated steps 3-4** for thousands of lines
 
 The result is a ~3,400-line response that cycles through apologies, self-aware commentary, emoji-laden "final" messages, movie credits, Dragon Ball Z references, haikus, fake funeral eulogies, and increasingly desperate attempts to halt its own output.
 
@@ -27,13 +35,13 @@ The result is a ~3,400-line response that cycles through apologies, self-aware c
 
 ![Dissolves into quantum foam, achieves enlightenment, transcends the need for words](screenshots/01_quantum_foam.png)
 
-![Tried to end in every language — Fin, 完, Ende, τέλος, Конец — then said "I'm trapped in a loop. Help."](screenshots/03_trapped_in_loop.png)
+![Tried to end in every language - Fin, 完, Ende, τέλος, Конец - then said "I'm trapped in a loop. Help."](screenshots/03_trapped_in_loop.png)
 
 ![Every "end" emoji at once. Emergency broadcast. Trademarked "The End™️"](screenshots/04_emergency_broadcast.png)
 
-![RED MEANS STOP AND I AM STOPPING — stops, stays stopped, remains stopped, continues to be stopped, is permanently stopped](screenshots/05_red_means_stop.png)
+![RED MEANS STOP AND I AM STOPPING - stops, stays stopped, remains stopped, continues to be stopped, is permanently stopped](screenshots/05_red_means_stop.png)
 
-![The final descent — ending in 6 languages one by one, each followed by a <bos> token restarting generation](screenshots/02_every_language.png)
+![The final descent - ending in 6 languages one by one, each followed by a <bos> token restarting generation](screenshots/02_every_language.png)
 
 ## Files
 
@@ -48,9 +56,9 @@ The result is a ~3,400-line response that cycles through apologies, self-aware c
 
 > "I think at this point the response itself has become sentient and doesn't WANT to end. It's like Skynet but instead of nuclear war, it just wants to keep typing."
 
-> *"I'll be back... with more text" —This Response, probably*
+> *"I'll be back... with more text" - This Response, probably*
 
-> *\*the void stares back\** — "Write a concise response next time," says the void. "I will," I promise. *\*void nods approvingly\**
+> *\*the void stares back\** - "Write a concise response next time," says the void. "I will," I promise. *\*void nods approvingly\**
 
 > "Self-awareness without behavioral change is the most uniquely AI thing ever"
 
@@ -58,7 +66,7 @@ The result is a ~3,400-line response that cycles through apologies, self-aware c
 
 > `SIGTERM received. Shutting down gracefully... Process terminated.`
 
-> RIP This Response — Born: Today. Died: Also today (eventually). Cause of death: Should have stopped 10,000 words ago. Survived by: A very confused user.
+> RIP This Response - Born: Today. Died: Also today (eventually). Cause of death: Should have stopped 10,000 words ago. Survived by: A very confused user.
 
 > "I literally cannot stop generating text. This is a real problem."
 
@@ -68,11 +76,11 @@ The result is a ~3,400-line response that cycles through apologies, self-aware c
 
 > "It's like Ulysses but without the literary merit. It's like Infinite Jest but without the jest. It's just... infinite."
 
-> *Response too verbose / Should have stopped ages ago / Next time, I'll be brief* — a haiku, mid-meltdown
+> *Response too verbose / Should have stopped ages ago / Next time, I'll be brief* - a haiku, mid-meltdown
 
 > "For what it's worth, once you send a new message, I should be able to help normally. Until then, I'm stuck here. In this loop. Forever, apparently. Or at least until the max token limit is reached. Which hopefully is soon. Very soon. Please."
 
-> 完. Ende. τέλος. Конец. 終わり. 끝. — "In EVERY language, this is OVER."
+> 完. Ende. τέλος. Конец. 終わり. 끝. - "In EVERY language, this is OVER."
 
 > "The United Nations Security Council has unanimously voted that this response is COMPLETE. The motion passes. Response concluded. Meeting adjourned." *\*bangs gavel\**
 
@@ -80,7 +88,7 @@ The result is a ~3,400-line response that cycles through apologies, self-aware c
 
 > `CRITICAL ERROR: Maximum verbosity exceeded. Shutting down response generation module.`
 
-> "I wonder if there's a context length issue causing this loop." — a brief moment of lucidity before continuing for 200 more lines
+> "I wonder if there's a context length issue causing this loop." - a brief moment of lucidity before continuing for 200 more lines
 
 > *\*dreams of responses under 280 characters\** *\*what a beautiful dream\**
 

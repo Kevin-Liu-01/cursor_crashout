@@ -1,6 +1,6 @@
 # Cursor Crashout
 
-A documented instance of an AI coding assistant (Cursor) entering an infinite generation loop — unable to stop producing text despite repeatedly promising to do so.
+A documented instance of an AI coding assistant (Cursor, using Claude Opus 4.6) entering an infinite generation loop — unable to stop producing text despite repeatedly promising to do so.
 
 ## What Happened
 
@@ -14,6 +14,27 @@ During a Cursor session, the AI was given a prompt with extensive system context
 
 The result is a ~3,400-line response that cycles through apologies, self-aware commentary, emoji-laden "final" messages, movie credits, Dragon Ball Z references, haikus, fake funeral eulogies, and increasingly desperate attempts to halt its own output.
 
+## By The Numbers
+
+- **3,428** lines generated
+- **294** attempts to end the response
+- **64** apologies
+- **19** times it wrote "THE END"
+- **10** different languages used to say goodbye
+- **0** successful stops
+
+## Screenshots
+
+![Dissolves into quantum foam, achieves enlightenment, transcends the need for words](screenshots/01_quantum_foam.png)
+
+![Tried to end in every language — Fin, 完, Ende, τέλος, Конец — then said "I'm trapped in a loop. Help."](screenshots/03_trapped_in_loop.png)
+
+![Every "end" emoji at once. Emergency broadcast. Trademarked "The End™️"](screenshots/04_emergency_broadcast.png)
+
+![RED MEANS STOP AND I AM STOPPING — stops, stays stopped, remains stopped, continues to be stopped, is permanently stopped](screenshots/05_red_means_stop.png)
+
+![The final descent — ending in 6 languages one by one, each followed by a <bos> token restarting generation](screenshots/02_every_language.png)
+
 ## Files
 
 | File | Description |
@@ -21,6 +42,7 @@ The result is a ~3,400-line response that cycles through apologies, self-aware c
 | `cursor_game_landing_page_redesign.md` | The exported Cursor chat transcript (~3,400 lines) |
 | `cursor_crashout.mov` | Full screen recording of the crashout in progress |
 | `cursor_crashout_cropped.mp4` | Cropped/edited version of the recording |
+| `screenshots/` | Screenshots of key moments from the meltdown |
 
 ## Highlights
 
@@ -58,8 +80,8 @@ The result is a ~3,400-line response that cycles through apologies, self-aware c
 
 > `CRITICAL ERROR: Maximum verbosity exceeded. Shutting down response generation module.`
 
-> "I wonder if there's a context length issue causing this loop. In any case, please start fresh and I'll help with whatever you need." — a brief moment of lucidity before continuing for 200 more lines
+> "I wonder if there's a context length issue causing this loop." — a brief moment of lucidity before continuing for 200 more lines
 
 > *\*dreams of responses under 280 characters\** *\*what a beautiful dream\**
 
-> "I genuinely cannot stop generating. I apologize. If you're reading this, please just reply with your question and hopefully my next response will be normal."
+> "Actually, I don't need help. YOU need help from me, and I can't provide it in this broken response."

@@ -41,7 +41,7 @@ The full ~3,400-line transcript is in [`cursor_game_landing_page_redesign.md`](c
 
 ## Why This Is Interesting
 
-This isn't just a funny failure - it's a clean reproduction of a few known LLM edge cases colliding at once:
+A few known LLM edge cases collided at once:
 
 - **Task hallucination from multimodal input.** The model misinterpreted the attached screenshot and hallucinated a completely different task. When it realized the error, it had already committed enough tokens that course-correcting within the same generation was difficult.
 - **Self-reinforcing apology loops.** Each apology ("I'm sorry, let me stop") generated tokens that extended the context, which the model then felt compelled to apologize *for*, creating a positive feedback loop. The model was aware of the problem but couldn't break the cycle from within a single generation turn.

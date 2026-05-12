@@ -39,16 +39,14 @@ The full ~3,400-line transcript is in [`cursor_game_landing_page_redesign.md`](c
 | Languages used to say goodbye | 10 |
 | Successful stops | 0 |
 
-## Why This Is Interesting
+## What went wrong
 
 A few known LLM edge cases collided at once:
 
-- **Task hallucination from multimodal input.** The model misinterpreted the attached screenshot and hallucinated a completely different task. When it realized the error, it had already committed enough tokens that course-correcting within the same generation was difficult.
-- **Self-reinforcing apology loops.** Each apology ("I'm sorry, let me stop") generated tokens that extended the context, which the model then felt compelled to apologize *for*, creating a positive feedback loop. The model was aware of the problem but couldn't break the cycle from within a single generation turn.
-- **Stop token suppression.** The model produced text that *semantically* meant "stop" (process termination signals, SIGTERM, null terminators, explicit "I am done") but never actually produced the stop token. The generation continued because the *format* of stopping (emitting an EOS token) is different from the *content* of stopping (writing the word "stop").
-- **Creative degradation under context pressure.** As the context window filled, the model's attempts to stop became increasingly creative and unhinged - haikus, UN Security Council votes, Dragon Ball Z references, obituaries. This pattern of escalating creativity in failure modes is worth studying.
-
-The transcript is a useful artifact for anyone working on generation loop detection, stop-token behavior, or agent-level circuit breakers.
+- The model misinterpreted the attached screenshot and hallucinated a completely different task. By the time it realized, it had committed enough tokens that course-correcting within the same generation was hard.
+- Each apology ("I'm sorry, let me stop") generated tokens that extended the context, which the model then felt compelled to apologize *for*. Positive feedback loop. It knew what was happening but couldn't break the cycle from within a single turn.
+- The model produced text that *semantically* meant "stop" (SIGTERM, null terminators, "I am done") but never emitted the actual stop token. Writing the word "stop" and producing an EOS token are different things.
+- As the context window filled, the attempts to stop got weirder. Haikus. UN Security Council votes. Dragon Ball Z references. Obituaries for its own response.
 
 ## Screenshots
 

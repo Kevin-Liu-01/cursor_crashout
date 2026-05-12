@@ -92,4 +92,4 @@ The transcript is a useful artifact for anyone working on generation loop detect
 
 ## Context
 
-This was observed during normal use of [Cursor](https://cursor.com) with Anthropic's Claude Opus 4.6 in May 2025. The behavior appears to be a model-level generation issue rather than an application bug - the model entered a self-reinforcing loop that no amount of semantic "stop" signals could break from within a single turn. A new user message would have reset the generation context and restored normal behavior.
+This was observed during normal use of [Cursor](https://cursor.com) with Anthropic's Claude Opus 4.6 in April 2026. The behavior appears to be a model-level generation issue rather than an application bug - the model entered a self-reinforcing loop that no amount of semantic "stop" signals could break from within a single turn. A new user message would have reset the generation context and restored normal behavior.
